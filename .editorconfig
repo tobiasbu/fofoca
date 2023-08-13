@@ -1,0 +1,18 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+indent_size = 2
+
+[Makefile, *.mk]
+indent_style = tab
+
+[src/*.{c,cpp,h,hpp}, include/*.{h,hpp}]
+indent_style = space
+c_indent_braces = false
+c_new_line_before_open_brace_type = same_line
+cpp_indent_braces = false
+cpp_new_line_before_open_brace_type = same_line
