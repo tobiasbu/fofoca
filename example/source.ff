@@ -1,0 +1,209 @@
+// This is a comment
+/* This is a
+   comment 
+   block
+*/
+
+
+// ([0-9]+\\.?[0-9]*)(\\.?(f|F|d|D|i|I|u|U)
+
+// var declaration ([])
+// - type inference
+// - shadowing not allowed
+
+a = 0
+b = 0u // unsigned int 32
+
+str = "my string"
+str = $"a {variable}"
+another_str = 'single quoted string'
+array = [1, 2, 3, "array"]
+object = {
+    "key" = value
+    nested = {
+        "key" = value
+    }
+}
+
+// explicit var declaration
+// primitives types
+
+// by named primitive
+byte small_int = 8
+ubyte = unsigned_small_int = 8
+short short_int = 16
+ushort unsigned_short = 16
+int integer = 32
+uint unsigned_integer = 32
+long long_integer = 64
+ulong long_integer = 64
+
+// floating point
+float float_num = 32.987
+double double_nume = 64.987456123987654321
+
+// by bit size
+i8 int_8bit = 8
+u8 uint_8bit = 8
+i16 int_16bit = 16
+u16 uint_16bit = 16
+i32 int_32bit = 32
+u32 uint_32bit = 32
+i64 int_64bit = 64
+u64 uint_64bit = 64
+f32 float_32bit = 32.1
+f64 flaot_64bit = 64.123456789
+
+
+// boolean
+bool truthy = true
+bool falsy = false
+bool sim = yes
+bool nao = no
+
+// strings
+string str_2 = 'asdasd'
+str str = 'caasda'
+
+// any type
+any any_value = nil
+non_explict_any = null
+
+// arrays
+int[] int_8bit_arr = [1, 2 , 3]
+[]int int_8bit_arr2 = [255] // same thing
+
+
+int[4] fixed_size = [0, 1, 2, 3]
+
+// grouping declaration
+const {
+    CONSTANT_VAR = 13
+}
+
+const CONSTANT_VAR = 13
+
+props {
+    life = 3 
+    attack = 4
+    str = "my string"
+    second_string 'another string'
+    array = [0, 2, 3, 4, 5]
+}
+
+
+fn function -> i32 {
+    if a || !a {
+
+    }
+
+    if a is yes || a and b {
+        
+    }
+   
+    while true && false {
+
+    }
+
+    for a,i in collection {
+
+    }
+
+    try {
+
+    } catch ex {
+
+    }
+
+    switch something {
+        case a:
+        case b:
+    }
+
+    match something {
+        // literals 
+        "string":
+        1:
+        true:
+
+        // error handling
+        ok:
+        err:
+        
+    }
+
+    try function()
+
+    print("built-in", 1234)
+    printf("%s-in", "built")
+
+    return;
+}
+
+inter MyInterface {
+
+}
+
+class parent {
+
+}
+
+class derived : private parent {
+
+}
+
+partial class derived {
+
+}
+
+
+interop "lib" as Lib {
+    extern {
+        pub:
+            pub fn c_function_no_args()
+            pub fn c_function(i32)
+            private fn c_function2(i32 a, i32 b) -> i32 
+    }
+    pub {
+        fn a_function() {
+
+        }
+    }
+}
+
+Lib.c_function_no_args()
+
+import {
+    /* import entire folder */
+    folder from "./folder"
+
+    /* global import */
+    "./file.mate"
+
+    /* namespaced */
+    Namespace from "./file.mate"
+
+    /* specific */
+    { imported, anotherOne } from "./file.mate"
+}
+
+
+export {
+    fn a() {}
+}
+
+export fn a() {
+
+}
+
+class entity {
+    public {
+        fn a()
+    }
+    protected {
+
+    }
+    private {
+
+    }
+}
